@@ -11,7 +11,7 @@ app.use((cors()));
 app.use(router);
 
 mongoose
-  .connect('mongodb+srv://doyaleldho:doyal3648@cluster0.ladkc.mongodb.net/Try?retryWrites=true&w=majority&appName=Cluster0')
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log('Database connected');
   })
